@@ -1,3 +1,6 @@
 # Juice Shop training challenge value, not a real credential.
 # Accepted by A. Swain 2026-11-15, review by 2027-05-15
 2b544156a88764d90231d9d64fb47749609dfe50:test/api/helpers/passkey.ts:generic-api-key:56
+072cee06f868efe855eb5dc3a6221a6739abe7f3:data/static/users.yml:generic-api-key:296
+c5047c80218df845e2c2ffcf8f564cba6f065728:test/api/passkey.test.ts:generic-api-key:21
+fefd063136a20cf406933cacb6b1f3414be92c8b:frontend/src/app/manage-passkeys/passkey-providers.ts:generic-api-key:9
