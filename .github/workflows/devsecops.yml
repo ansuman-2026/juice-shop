@@ -24,3 +24,17 @@ jobs:
         continue-on-error: true   # REPORT-ONLY for now (removed in Step 7)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  sast:
+    name: SAST (SonarQube Cloud)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # full history gives accurate blame and new-code detection
+      - name: Scan and wait for the quality gate
+        uses: SonarSource/sonarqube-scan-action@v8
+        continue-on-error: true   # REPORT-ONLY for now
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: -Dsonar.qualitygate.wait=true        
